@@ -16,21 +16,21 @@ public class RemoveSpecifiedCharacters {
 
 	
 	public String removeChars( String str, String remove ){
-		Set<Character> lookup = new HashSet<>();
+		Set<Character> lookup = new HashSet<Character>();
 		for(char c:remove.toCharArray()){
 			lookup.add(c);
 		}
 		
 	char[] out = new char[str.toCharArray().length];
-		
+		int j=0;
 		for(int i =0; i< str.toCharArray().length;i++){
 			if(lookup.contains(str.charAt(i))){
 				//
 			}else{
-				out[i] = str.charAt(i);
+				out[j] = str.charAt(i);
+				j++;
 			}
 		}
-		
-		return new String(out);
+		return new String(out).trim();
 	}
 }
