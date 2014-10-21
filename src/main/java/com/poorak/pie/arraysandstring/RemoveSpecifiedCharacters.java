@@ -1,0 +1,36 @@
+package com.poorak.pie.arraysandstring;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * PROBLEM Write an efficient function that deletes characters from an ASCII string. Use the prototype
+string removeChars( string str, string remove );
+where any character existing in remove must be deleted from str. 
+For example, givenastrof"Battle of the Vowels: Hawaii vs. Grozny"andaremoveof "aeiou",thefunctionshouldtransformstrto“Bttl f th Vwls: Hw vs. Grzny”. 
+Justify any design decisions you make, and discuss the efficiency of your solution.
+ * @author poorak
+ *
+ */
+public class RemoveSpecifiedCharacters {
+
+	
+	public String removeChars( String str, String remove ){
+		Set<Character> lookup = new HashSet<>();
+		for(char c:remove.toCharArray()){
+			lookup.add(c);
+		}
+		
+	char[] out = new char[str.toCharArray().length];
+		
+		for(int i =0; i< str.toCharArray().length;i++){
+			if(lookup.contains(str.charAt(i))){
+				//
+			}else{
+				out[i] = str.charAt(i);
+			}
+		}
+		
+		return new String(out);
+	}
+}
