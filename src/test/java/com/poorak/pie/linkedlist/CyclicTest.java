@@ -1,9 +1,12 @@
 package com.poorak.pie.linkedlist;
 
-import static org.junit.Assert.*;
-
+import com.poorak.pie.year_two_thousand_fourteen.linkedlist.Cyclic;
+import com.poorak.pie.year_two_thousand_fourteen.linkedlist.ListP;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class CyclicTest {
 

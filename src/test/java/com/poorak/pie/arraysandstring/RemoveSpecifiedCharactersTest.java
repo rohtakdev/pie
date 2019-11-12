@@ -1,9 +1,10 @@
 package com.poorak.pie.arraysandstring;
 
-import static org.junit.Assert.*;
-
+import com.poorak.pie.year_two_thousand_fourteen.arraysandstring.RemoveSpecifiedCharacters;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class RemoveSpecifiedCharactersTest {
 
