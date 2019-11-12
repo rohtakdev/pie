@@ -1,5 +1,7 @@
-package com.poorak.pie.arraysandstring;
+package com.poorak.pie.year_two_thousand_fourteen.arraysandstring;
 
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * PROBLEM Write an efficient function that deletes characters from an ASCII string. Use the prototype
@@ -10,24 +12,25 @@ Justify any design decisions you make, and discuss the efficiency of your soluti
  * @author poorak
  *
  */
-public class RemoveSpecifiedCharactersNoDS {
+public class RemoveSpecifiedCharacters {
+
+	
 	public String removeChars( String str, String remove ){
-		char[] s= str.toCharArray();
-		char[] r = remove.toCharArray();
-		char[] o = new char[s.length];
-		
-		boolean[] lookup = new boolean[256];
-		
-		for(char c:r){
-			lookup[c] =true;
+		Set<Character> lookup = new HashSet<Character>();
+		for(char c:remove.toCharArray()){
+			lookup.add(c);
 		}
+		
+	char[] out = new char[str.toCharArray().length];
 		int j=0;
-		for(int i=0;i<s.length; i++){
-			if(lookup[s[i]] == false){
-				o[j++] = s[i];
+		for(int i =0; i< str.toCharArray().length;i++){
+			if(lookup.contains(str.charAt(i))){
+				//
+			}else{
+				out[j] = str.charAt(i);
+				j++;
 			}
 		}
-		
-		return new String(o, 0, j);
+		return new String(out).trim();
 	}
 }
