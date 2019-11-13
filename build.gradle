@@ -1,11 +1,10 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
 
-sourceCompatibility = 1.8
-version = '1.0'
+sourceCompatibility = 1.12
+targetCompatibility = 1.12
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+        attributes 'Implementation-Title': 'PIE', 'Implementation-Version': 'v0.1'
     }
 }
 
@@ -15,11 +14,10 @@ repositories {
 
 dependencies {
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
-    testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
 test {
-    systemProperties 'property': 'value'
+    useJUnitPlatform()
 }
 
 uploadArchives {

@@ -27,6 +27,6 @@ public class StackImpl implements Stack {
         }
         Node response = head;
         head = head.getNext();
-        return null;
+        return response.getValue();
     }
 }
