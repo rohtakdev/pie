@@ -1,17 +1,16 @@
 package com.poorak.pie.arraysandstring;
 
 import com.poorak.pie.year_two_thousand_fourteen.arraysandstring.FindFirstNonRepeatedCharacter;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FindFirstNonRepeatedCharacterTest {
 	
 	private FindFirstNonRepeatedCharacter findFirstNonRepeatedCharacter;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		findFirstNonRepeatedCharacter = new FindFirstNonRepeatedCharacter();
 	}
