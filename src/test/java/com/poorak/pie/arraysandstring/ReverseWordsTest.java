@@ -1,19 +1,13 @@
 package com.poorak.pie.arraysandstring;
 
 import com.poorak.pie.year_two_thousand_fourteen.arraysandstring.ReverseWords;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReverseWordsTest {
 	
-	private ReverseWords reverseWords;
-
-	@BeforeEach
-	public void setUp() throws Exception {
-		reverseWords = new ReverseWords();
-	}
+	private final ReverseWords reverseWords = new ReverseWords();
 
 	@Test
 	public void test() {
