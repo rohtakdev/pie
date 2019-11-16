@@ -1,5 +1,7 @@
 package com.poorak.pie.tree;
 
+import java.util.StringJoiner;
+
 public class NodeImpl implements BinaryTree.Node<Integer> {
     private final BinaryTree.Node<Integer> left;
     private final BinaryTree.Node<Integer> right;
@@ -11,6 +13,13 @@ public class NodeImpl implements BinaryTree.Node<Integer> {
         this.value = value;
     }
 
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", NodeImpl.class.getSimpleName() + "[", "]")
+                .add("value=" + value)
+                .toString();
+    }
 
     @Override
     public BinaryTree.Node<Integer> getLeft() {

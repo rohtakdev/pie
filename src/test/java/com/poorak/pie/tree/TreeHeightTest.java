@@ -16,5 +16,6 @@ class TreeHeightTest {
     @Test
     void getHeight() {
         assertEquals(2, treeHeight.getHeight(TreeProvider.createTree()));
+        assertEquals(4, treeHeight.getHeight(TreeProvider.create6_6()));
     }
 }
