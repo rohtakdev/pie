@@ -4,9 +4,15 @@ import java.util.*;
 
 public class BaconNumber {
     class ActorNode {
-        private String name;
+        private final String name;
         private int baconNumber = -1;
-        private final Set<ActorNode> linkedActors = new HashSet<>();
+        private final Set<ActorNode> linkedActors;
+
+        public ActorNode(String name, Set<ActorNode> linkedActors) {
+            this.name = name;
+            this.linkedActors = linkedActors;
+        }
+
         public String getName() { return name; }
         public int getBaconNumber() { return baconNumber; }
         public void setBaconNumber(int baconNumber) { this.baconNumber = baconNumber; }
