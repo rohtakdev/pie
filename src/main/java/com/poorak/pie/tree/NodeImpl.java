@@ -35,4 +35,9 @@ public class NodeImpl implements BinaryTree.Node<Integer> {
     public Integer getValue() {
         return value;
     }
+
+    @Override
+    public BinaryTree.MutableNode<Integer> getMutable() {
+        return new MutableNodeImpl(this);
+    }
 }

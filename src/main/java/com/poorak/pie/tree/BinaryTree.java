@@ -5,6 +5,14 @@ public interface BinaryTree<T> {
         Node<T> getLeft();
         Node<T> getRight();
         T getValue();
+        MutableNode<T> getMutable();
+    }
+
+    interface MutableNode<T> {
+        MutableNode<T> setLeft(Node<T> left);
+        MutableNode<T> setRight(Node<T> right);
+        MutableNode<T> setValue(T value);
+        Node<T> build();
     }
 
     Boolean exists(T value);
