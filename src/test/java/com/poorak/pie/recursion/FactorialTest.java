@@ -8,13 +8,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class FactorialTest {
 
     private Factorial factorial;
+
     @BeforeEach
     void setUp() {
-        factorial  = new Factorial();
+        factorial = new Factorial();
     }
 
     @Test
     void factorial() {
         assertEquals(24, factorial.factorial(4));
+    }
+
+    @Test
+    void factorial_i() {
+        assertEquals(24, factorial.factorial_i(4));
     }
 }
